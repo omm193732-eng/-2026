@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>أعلام القرآن في قرية بندار</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f3ea;--card:#fff;--ink:#17302a;--mut:#6b7a74;--pri:#0f6b4f;--pri2:#0b4d38;--gold:#c9a227;--line:#e4dfce;--bar:#e9efe9;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a16;--card:#162520;--ink:#eef3ef;--mut:#9bb0a7;--pri:#2fae85;--pri2:#1f8a68;--gold:#e3c04a;--line:#253a33;--bar:#223730;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1a16;--card:#162520;--ink:#eef3ef;--mut:#9bb0a7;--pri:#2fae85;--pri2:#1f8a68;--gold:#e3c04a;--line:#253a33;--bar:#223730;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Cairo',Tahoma,Arial,sans-serif;line-height:1.6}
+header{background:linear-gradient(135deg,#0b4d38,#0f6b4f 60%,#17866a);color:#fff;text-align:center;padding:42px 16px 56px;position:relative;overflow:hidden}
+header::after{content:"";position:absolute;inset:auto 0 0 0;height:5px;background:linear-gradient(90deg,transparent,#c9a227,transparent)}
+.bism{font-size:20px;color:#f1d97a;margin-bottom:6px}
+h1{margin:0;font-size:clamp(26px,6vw,44px);font-weight:900}
+header p{margin:8px 0 0;opacity:.9;font-size:16px}
+main{max-width:1000px;margin:-30px auto 40px;padding:0 14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.06)}
+.stat b{display:block;font-size:26px;color:var(--pri);font-weight:900}
+.stat span{color:var(--mut);font-size:13px}
+.notice{border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:15px;background:var(--card);border:1px solid var(--line)}
+.notice.ok{border-color:var(--pri);color:var(--pri)}
+.notice.warn{border-color:var(--gold)}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tools input{flex:1;min-width:180px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit}
+.tab{padding:11px 16px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-weight:600;cursor:pointer}
+.tab.on{background:var(--pri);color:#fff;border-color:var(--pri)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:10px}
+.card.mine{border:2px solid var(--gold)}
+.top{display:flex;align-items:center;gap:10px}
+.num{flex:none;width:38px;height:38px;border-radius:50%;background:var(--bar);color:var(--pri);display:grid;place-items:center;font-weight:900}
+.card.r1 .num{background:#c9a227;color:#fff}.card.r2 .num{background:#9aa5a0;color:#fff}.card.r3 .num{background:#b0764a;color:#fff}
+.name{font-weight:700;font-size:17px;flex:1}
+.bar{height:9px;border-radius:9px;background:var(--bar);overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--pri),var(--gold));width:0;transition:width .5s}
+.row{display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--mut)}
+.row b{color:var(--ink);font-size:16px}
+.btn{border:0;border-radius:12px;padding:11px;background:var(--pri);color:#fff;font:inherit;font-weight:700;cursor:pointer}
+.btn:hover{background:var(--pri2)}
+.btn:disabled{background:var(--bar);color:var(--mut);cursor:not-allowed}
+.btn.done{background:var(--gold);color:#fff}
+footer{text-align:center;color:var(--mut);padding:20px;font-size:14px}
+dialog{border:0;border-radius:16px;padding:22px;background:var(--card);color:var(--ink);max-width:340px;text-align:center;font-family:inherit}
+dialog::backdrop{background:rgba(0,0,0,.5)}
+dialog .acts{display:flex;gap:8px;margin-top:14px}dialog .acts button{flex:1}
+.btn.ghost{background:var(--bar);color:var(--ink)}
+.adm{display:flex;gap:6px}.adm .btn{flex:1;padding:8px;font-size:13px}#ldlg input{width:100%;padding:10px;margin-top:8px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
+.av{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:none;border:2px solid var(--line)}.adm{flex-wrap:wrap}.adm .btn{flex:1 1 40%}#bdlg{max-width:420px;width:92%}#bdlg textarea{width:100%;height:200px;margin-top:8px;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
+</style>
+</head>
+<body>
+<header>
+  <div class="bism">﷽</div>
+  <h1>أعلام القرآن في قرية بندار</h1>
+  <p>صوّت لمتسابقك المفضّل في مسابقة القرآن الكريم</p>
+</header>
+<main>
+  <div class="stats">
+    <div class="stat"><b id="sTotal">0</b><span>إجمالي الأصوات</span></div>
+    <div class="stat"><b id="sCount">55</b><span>عدد المتسابقين</span></div>
+    <div class="stat"><b id="sLead">—</b><span>المتصدّر حالياً</span></div>
+  </div>
+  <div id="msg" class="notice">جارٍ تحميل التصويت…</div>
+  <div id="admin" class="notice warn" hidden><b>لوحة المنظّم</b>
+    <div class="tools" style="margin:10px 0 0"><input id="newName" placeholder="اسم المتسابق الجديد"><button class="tab on" id="addC">+ إضافة متسابق</button><button class="tab" id="tHide"></button><button class="tab" id="tClose"></button><button class="tab" id="bulk">＋ إضافة عدة متسابقين</button><button class="tab" id="csv">⬇ تصدير النتائج (CSV)</button><button class="tab" id="restore">↩ استرجاع المحذوفين</button></div>
+    <small style="color:var(--mut)">تحت كل متسابق أزرار: تعديل الأصوات، صورة، تعديل الاسم، حذف.</small></div>
+  <div class="tools">
+    <input id="q" type="search" placeholder="ابحث عن اسم متسابق…">
+    <button class="tab on" data-m="num">حسب الترتيب</button>
+    <button class="tab" data-m="votes">حسب الأصوات</button>
+  </div>
+  <div id="grid" class="grid"></div>
+</main>
+<footer>لكل جهاز صوتان كحد أقصى · النتائج تتحدّث مباشرة<br><a href="#" id="admLink" style="color:var(--mut);font-size:12px">دخول المنظّم</a></footer>
+
+<dialog id="dlg"><h3 style="margin:0 0 8px">تأكيد التصويت</h3><div>هل تريد التصويت لـ <b id="dn"></b>؟<br><small style="color:var(--mut)">لك صوتان كحد أقصى، ولا يمكن التراجع بعد التأكيد</small></div>
+<div class="acts"><button class="btn" id="yes">تأكيد</button><button class="btn ghost" id="no">إلغاء</button></div></dialog>
+
+<input type="file" id="file" accept="image/*" hidden>
+<dialog id="bdlg"><h3 style="margin:0">إضافة عدة متسابقين</h3><small style="color:var(--mut)">اكتب كل اسم في سطر. يمكنك لصق قائمة مرقّمة وسيُحذف الترقيم تلقائياً.</small><textarea id="bta" placeholder="الاسم الأول&#10;الاسم الثاني"></textarea><div class="acts"><button class="btn" id="bgo">إضافة الكل</button><button class="btn ghost" id="bcancel">إلغاء</button></div></dialog>
+<dialog id="ldlg"><h3 style="margin:0">دخول المنظّم</h3>
+<input id="em" type="email" placeholder="البريد الإلكتروني" dir="ltr"><input id="pw" type="password" placeholder="كلمة المرور" dir="ltr">
+<div id="lerr" style="color:#c0392b;font-size:14px;margin-top:6px"></div>
+<div class="acts"><button class="btn" id="lgo">دخول</button><button class="btn ghost" id="lcancel">إلغاء</button></div></dialog>
+<script type="module">
+import {initializeApp} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import {getAuth,signInAnonymously,onAuthStateChanged,signInWithEmailAndPassword,signOut} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import {getFirestore,collection,doc,setDoc,addDoc,deleteDoc,onSnapshot,increment,writeBatch} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+const NAMES=["مريم أحممد فراج","حبيبة حازم فراج ابراهيم","مريم اشرف عبد الغني","يحيى أمين الخطيب","زهراء أحمد السيد عطا","أشرقت محمد ابو الحمد","فاطمة اشرف أحمد عبد الحميد","محمد حازم فراج","غادة محمود صابر","محمدعبد الرافع عبد الفتاح","ريتاج محمود صابر","سارة محمد السيد","رودينا عبده خلف","مروة عبده خلف","كريم عبده خلف","ابتسام أحمدعبد العزيز","أسماء احمد عبد العزيز","أنس عبد الرافع عبد الفتاح","ملك أحمد موسى إمام","أمجد جعفر عبدالواحد","مصطفى عبد العاطي أحمد","هنا محمود عبدالاخر","محمد عبدالاخر","محمد ممدوح صلاح عبدالرحمن","ياسمين احمد فراج","عمار عبد الرافع عبد الفتاح","محمد أكرم علي بكري","بكري أكرم علي بكري","أنسام إسلام حتوت","آدم أحمد عبد الكريم","هند عصمت النمر","أدهم رأفت عبد الكريم","أنس حمزة محمد إسماعيل","أويس حمزة محمد محمد إسماعيل","عبد الوهاب أسامه","ريتاج محمد أمين","رويدا أبو العزايم عبد الكريم","فريحة أبو العزايم عبد الكريم","عمار عبدالحفيظ أحمد","البراء آدم حتوت","غادة محمد جابر","أيسل عصمت أحمد علي","نورهان محمد السيد","كريم عبد العليم أحمد","عبد الله أشرف مختار","آراء زين العابدين أحمد عبد الموجود","إسراء أحمد أحمد عبد الموجود","ريتال عبد النعيم أحمد بخيت","رحمة على الشاذلي","سلسبيل على الشاذلي","ملك عاطف محمد أحمد","محمد علي الشاذلي","ميار محمود السيد هريدي","مودة علي الشاذلي","عبدالله وائل ضاحي عبدالرحيم","كريم محمود صابر","راشد محمد راشد","عدي عمرو عبدالرحيم","عبدالرحيم عمرو عبدالرحيم","محمد عمرو محمد محمود","أحمد عبد الفتاح سيد","علي اكرم علي","رغد عبد الحفيظ مصطفى","زينب السيد عبد الرحمن","شيماء السيد عبد الرحمن","رضوي سعد سيداحمد محمو","رحمة يونس محمد","زياد يونس محمد","رؤى محمد عبد اللاه","احمد بهجت صلاح","هاجر بهجت صلاح","عبد الرحمن محمد أحمد","محمود طلعت محمد","صلاح اشرف أحمد عبد الحميد","بشاير حمدي سعدالدين"];
+const $=s=>document.querySelector(s);
+const fmt=n=>n.toLocaleString('ar-EG');
+const isDef=id=>/^c\d+$/.test(id);
+const ph=x=>typeof x.photo==='string'&&x.photo.startsWith('data:image/')?x.photo:null;
+const DEF=NAMES.map((n,i)=>({id:'c'+(i+1),name:n}));
+let meta={},customs=[],voteDocs=[],list=[],real={},total=0,mine=[],mode='num',uid=null,admin=false,pending=null,ready=false,settings={},picId=null;
+const firebaseConfig={apiKey:"AIzaSyDyg3UnQxTnITcES1pC5Qvx40wQjX27dAg",authDomain:"dadu-66318.firebaseapp.com",projectId:"dadu-66318",appId:"1:904902320818:web:f4d1c19ebdf24509099fab"};
+const app=initializeApp(firebaseConfig),auth=getAuth(app),db=getFirestore(app);
+function setMsg(t,c){const m=$('#msg');m.textContent=t;m.className='notice '+(c||'')}
+function status(){
+  if(!ready)return;
+  if(settings.closed)setMsg('انتهى التصويت. شكراً لمشاركتكم جميعاً 🌿','ok');
+  else if(mine.length>=2)setMsg('✓ استخدمت صوتيك. شكراً لمشاركتك!','ok');
+  else if(mine.length===1)setMsg('✓ تبقّى لك صوت واحد، اختر متسابقاً آخر.','ok');
+  else setMsg('اختر متسابقك واضغط «صوّت». لك صوتان كحد أقصى، لمتسابقين مختلفين.');
+}
+function build(){
+  list=[...DEF.filter(c=>!(meta[c.id]&&meta[c.id].deleted)).map(c=>{const m=meta[c.id]||{};return {...c,name:m.name||c.name,extra:m.extra||0,photo:m.photo||null}}),...customs];
+  recompute();
+}
+function recompute(){
+  real={};mine=[];const ids=new Set(list.map(c=>c.id));
+  voteDocs.forEach(d=>{let a=Array.isArray(d.choices)?d.choices:[];a=[...new Set(a)].filter(c=>ids.has(c)).slice(0,2);a.forEach(c=>{real[c]=(real[c]||0)+1});if(d.id===uid)mine=a});
+  list.forEach(c=>{c.v=Math.max(0,(real[c.id]||0)+(c.extra||0))});
+  total=list.reduce((s,c)=>s+c.v,0);status();render();
+}
+function render(){
+  const hidden=!!settings.hideResults&&!admin,closed=!!settings.closed,m=hidden?'num':mode;
+  document.querySelector('.tab[data-m="votes"]').hidden=hidden;
+  $('#tHide').textContent=settings.hideResults?'👁 إظهار النتائج للجميع':'🙈 إخفاء النتائج';
+  $('#tClose').textContent=closed?'▶ إعادة فتح التصويت':'⏹ إغلاق التصويت';
+  const q=$('#q').value.trim();
+  const rank={};[...list].sort((a,b)=>b.v-a.v).forEach((c,k)=>rank[c.id]=c.v>0?k+1:99);
+  let arr=list.map((c,i)=>({c,n:i+1}));
+  if(m==='votes')arr.sort((a,b)=>b.c.v-a.c.v||a.n-b.n);
+  if(q)arr=arr.filter(x=>x.c.name.includes(q));
+  const max=Math.max(1,...list.map(c=>c.v));
+  $('#grid').innerHTML=arr.map(({c,n})=>{
+    const pct=total?Math.round(c.v/total*100):0,isMine=mine.includes(c.id),dis=!uid||closed||mine.length>=2||isMine;
+    const stats=hidden?'':`<div class="bar"><i style="width:${c.v/max*100}%"></i></div><div class="row"><span><b>${fmt(c.v)}</b> صوت</span><span>${fmt(pct)}٪</span></div>`;
+    return `<div class="card ${isMine?'mine':''} ${!hidden&&rank[c.id]<=3?'r'+rank[c.id]:''}"><div class="top"><div class="num">${fmt(n)}</div>${c.photo?`<img class="av" src="${c.photo}" alt="">`:''}<div class="name"></div></div>${stats}<button class="btn ${isMine?'done':''}" data-id="${c.id}" ${dis?'disabled':''}>${isMine?'✓ صوتّك لهذا المتسابق':(closed?'التصويت مغلق':'صوّت')}</button>${admin?`<div class="adm"><button class="btn ghost" data-adj="${c.id}">± أصوات</button><button class="btn ghost" data-pic="${c.id}">📷 صورة</button><button class="btn ghost" data-ren="${c.id}">✏️ الاسم</button><button class="btn ghost" data-del="${c.id}">حذف</button></div>`:''}</div>`}).join('')||'<div class="notice">لا توجد نتائج مطابقة</div>';
+  [...document.querySelectorAll('.card .name')].forEach((el,k)=>el.textContent=arr[k].c.name);
+  $('#sCount').textContent=fmt(list.length);
+  if(hidden){$('#sTotal').textContent='—';$('#sLead').textContent='مخفية';}
+  else{$('#sTotal').textContent=fmt(total);const lead=[...list].sort((a,b)=>b.v-a.v)[0];$('#sLead').textContent=lead&&lead.v?lead.name.split(' ').slice(0,2).join(' '):'—'}
+  $('#sLead').style.fontSize='16px';
+}
+$('#q').oninput=render;
+document.querySelectorAll('.tab[data-m]').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab[data-m]').forEach(t=>t.classList.remove('on'));b.classList.add('on');mode=b.dataset.m;render()});
+async function adminOp(fn,ok){try{await fn();if(ok)setMsg(ok,'ok')}catch(e){setMsg('لا تملك صلاحية هذا الإجراء. تأكد من الدخول كمنظّم ومن القواعد.','warn')}}
+$('#grid').onclick=e=>{
+  const b=e.target.closest('button');if(!b||b.disabled)return;
+  const d=b.dataset;
+  if(d.id){pending=d.id;$('#dn').textContent=list.find(c=>c.id===pending).name;$('#dlg').showModal()}
+  else if(d.adj){const n=parseInt(prompt('اكتب عدد الأصوات المراد إضافتها (أو رقماً سالباً للخصم):'),10);if(n)adminOp(()=>setDoc(doc(db,'contestants',d.adj),{extra:increment(n)},{merge:true}),'✓ تم تعديل الأصوات')}
+  else if(d.pic){picId=d.pic;$('#file').click()}
+  else if(d.ren){const c=list.find(x=>x.id===d.ren);const n=prompt('الاسم الجديد:',c.name);if(n&&n.trim())adminOp(()=>setDoc(doc(db,'contestants',d.ren),{name:n.trim()},{merge:true}),'✓ تم تعديل الاسم')}
+  else if(d.del){const c=list.find(x=>x.id===d.del);if(confirm('حذف «'+c.name+'» نهائياً؟'))adminOp(()=>isDef(d.del)?setDoc(doc(db,'contestants',d.del),{deleted:true},{merge:true}):deleteDoc(doc(db,'contestants',d.del)),'✓ تم الحذف')}
+};
+$('#no').onclick=()=>$('#dlg').close();
+$('#yes').onclick=async()=>{
+  $('#dlg').close();if(!pending||settings.closed||mine.length>=2||mine.includes(pending)||!uid)return;
+  try{await setDoc(doc(db,'votes',uid),{choices:[...mine,pending],ts:Date.now()})}catch(e){setMsg('تعذّر تسجيل الصوت (قد يكون التصويت أُغلق).','warn')}
+};
+$('#addC').onclick=()=>{const n=$('#newName').value.trim();if(!n)return;adminOp(async()=>{await addDoc(collection(db,'contestants'),{name:n,extra:0,ts:Date.now()});$('#newName').value=''},'✓ تمت إضافة المتسابق')};
+$('#tHide').onclick=()=>adminOp(()=>setDoc(doc(db,'settings','main'),{hideResults:!settings.hideResults},{merge:true}));
+$('#tClose').onclick=()=>adminOp(()=>setDoc(doc(db,'settings','main'),{closed:!settings.closed},{merge:true}));
+$('#admLink').onclick=e=>{e.preventDefault();if(admin)signOut(auth);else $('#ldlg').showModal()};
+$('#lcancel').onclick=()=>$('#ldlg').close();
+$('#lgo').onclick=async()=>{try{await signInWithEmailAndPassword(auth,$('#em').value.trim(),$('#pw').value);$('#ldlg').close();$('#pw').value='';$('#lerr').textContent=''}catch(e){$('#lerr').textContent='بيانات الدخول غير صحيحة'}};
+
+$('#bulk').onclick=()=>{$('#bta').value='';$('#bdlg').showModal()};
+$('#bcancel').onclick=()=>$('#bdlg').close();
+$('#bgo').onclick=()=>{
+  const names=$('#bta').value.split('\n').map(x=>x.replace(/^[\s\d٠-٩]+[\.\-\/،:)]*\s*/,'').replace(/\s+/g,' ').trim()).filter(Boolean);
+  if(!names.length)return;$('#bdlg').close();
+  adminOp(async()=>{const b=writeBatch(db),t=Date.now();names.forEach((n,i)=>b.set(doc(collection(db,'contestants')),{name:n,extra:0,ts:t+i}));await b.commit()},'✓ تمت إضافة '+names.length+' متسابق');
+};
+$('#restore').onclick=()=>{
+  const ids=Object.keys(meta).filter(id=>meta[id].deleted);
+  if(!ids.length){setMsg('لا يوجد متسابقون محذوفون.');return}
+  if(!confirm('استرجاع '+ids.length+' متسابق محذوف؟'))return;
+  adminOp(async()=>{const b=writeBatch(db);ids.forEach(id=>b.set(doc(db,'contestants',id),{deleted:false},{merge:true}));await b.commit()},'✓ تم الاسترجاع');
+};
+$('#csv').onclick=()=>{
+  const q=s=>'"'+String(s).replace(/"/g,'""')+'"',nm={};list.forEach(c=>nm[c.id]=c.name);
+  const order=list.map((c,i)=>({c,n:i+1})).sort((a,b)=>b.c.v-a.c.v||a.n-b.n);
+  let csv='الترتيب,رقم المتسابق,الاسم,أصوات حقيقية,أصوات يدوية,الإجمالي\n';
+  order.forEach((x,k)=>{csv+=[k+1,x.n,q(x.c.name),real[x.c.id]||0,x.c.extra||0,x.c.v].join(',')+'\n'});
+  csv+='\nإجمالي الأصوات,'+total+'\n\nمعرّف المصوّت,الصوت الأول,الصوت الثاني\n';
+  voteDocs.forEach(d=>{const a=Array.isArray(d.choices)?d.choices:[];csv+=[q(d.id),q(nm[a[0]]||''),q(nm[a[1]]||'')].join(',')+'\n'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'}));
+  a.download='نتائج-التصويت-'+new Date().toISOString().slice(0,10)+'.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1500);
+};
+$('#file').onchange=async e=>{
+  const f=e.target.files[0];e.target.value='';if(!f||!picId)return;const id=picId;
+  try{
+    const url=await new Promise((res,rej)=>{const r=new FileReader();r.onerror=rej;r.onload=()=>{const im=new Image();im.onerror=rej;im.onload=()=>{const S=240,cv=document.createElement('canvas');cv.width=cv.height=S;const m=Math.min(im.width,im.height);cv.getContext('2d').drawImage(im,(im.width-m)/2,(im.height-m)/2,m,m,0,0,S,S);res(cv.toDataURL('image/jpeg',0.8))};im.src=r.result};r.readAsDataURL(f)});
+    adminOp(()=>setDoc(doc(db,'contestants',id),{photo:url},{merge:true}),'✓ تم حفظ الصورة');
+  }catch(err){setMsg('تعذّر قراءة الصورة.','warn')}
+};
+onAuthStateChanged(auth,u=>{
+  if(!u){signInAnonymously(auth).catch(()=>setMsg('تعذّر الاتصال بالخادم. راجع إعدادات Firebase.','warn'));return}
+  uid=u.uid;admin=!u.isAnonymous;$('#admin').hidden=!admin;$('#admLink').textContent=admin?'خروج المنظّم':'دخول المنظّم';recompute();
+});
+const bad=()=>setMsg('تعذّر قراءة البيانات. راجع قواعد Firestore.','warn');
+onSnapshot(collection(db,'votes'),sn=>{voteDocs=sn.docs.map(d=>({id:d.id,choices:(d.data()||{}).choices}));ready=true;recompute()},bad);
+onSnapshot(collection(db,'contestants'),sn=>{meta={};customs=[];sn.docs.forEach(d=>{const x=d.data()||{};if(isDef(d.id))meta[d.id]={extra:+x.extra||0,name:x.name?String(x.name):null,deleted:!!x.deleted,photo:ph(x)};else if(x.name)customs.push({id:d.id,name:String(x.name),extra:+x.extra||0,ts:x.ts||0,photo:ph(x)})});customs.sort((a,b)=>a.ts-b.ts);build()},bad);
+onSnapshot(doc(db,'settings','main'),sn=>{settings=sn.exists()?sn.data():{};recompute()},bad);
+build();
+</script>
+</body>
+</html>
